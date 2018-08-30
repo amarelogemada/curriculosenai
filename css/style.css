@@ -1,0 +1,220 @@
+/* Desculpem a bagunça gente, fui organizar e vi que algumas coisas pararam de funcionar, então achei melhor analisar e organizar outra hora */
+
+
+/* reset */
+* {
+    margin:0;
+    padding:0;
+    font-family: 'geomanist';
+    list-style: none;    
+}
+
+/* Fontes */
+@font-face {
+    font-family: 'geomanist';
+    src: url('../fonts/Geomanist-Book-Webfont/geomanist-book-webfont.eot');
+    src: url('../fonts/Geomanist-Book-Webfont/geomanist-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Geomanist-Book-Webfont/geomanist-book-webfont.woff2') format('woff2'),
+         url('../fonts/Geomanist-Book-Webfont/geomanist-book-webfont.woff') format('woff'),
+         url('../fonts/Geomanist-Book-Webfont/geomanist-book-webfont.ttf') format('truetype'),
+         url('../fonts/Geomanist-Book-Webfont/geomanist-book-webfont.svg#geomanistregular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geomanist';
+    src: url('../fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.eot');
+    src: url('../fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff2') format('woff2'),
+         url('../fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff') format('woff'),
+         url('../fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.ttf') format('truetype'),
+         url('../fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.svg#geomanistregular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geomanist';
+    src: url('../fonts/Geomanist-Black-Webfont/geomanist-black-webfont.eot');
+    src: url('../fonts/Geomanist-Black-Webfont/geomanist-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Geomanist-Black-Webfont/geomanist-black-webfont.woff2') format('woff2'),
+         url('../fonts/Geomanist-Black-Webfont/geomanist-black-webfont.woff') format('woff'),
+         url('../fonts/Geomanist-Black-Webfont/geomanist-black-webfont.ttf') format('truetype'),
+         url('../fonts/Geomanist-Black-Webfont/geomanist-black-webfont.svg#geomanistregular') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* geral*/
+header {
+    background: url("../img/banner.gif") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1,
+.resumo p {
+    font-weight: 600;
+    font-size: 3vw;
+    color: white;
+}
+
+
+h2 {
+    font-weight: 600;
+    font-size: 3vw;  
+    
+}
+
+.apresentacao h2,
+.formacao h2,
+.contato h2 {
+    color: #80C5E1;
+}
+
+.experiencia h2 {
+    color: white;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2.5vw; 
+}
+
+p,
+.bloco-texto-unidade li {
+    font-weight: 300;
+    font-size: 2.5vw; 
+}
+
+.separacao {
+    border-bottom: solid white 5px;
+    display: block;
+    width: 50px;
+    margin: 10px 0;
+}
+
+.background {
+    height: 108vh;
+    width: 100vw;
+}
+
+.resumo {
+    margin-left: 7%;
+    padding-top: 4%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.flex-container-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-container .bloco-texto {
+    width: 55%;
+}
+
+.bloco-texto-footer {
+    width: 25%;
+}
+
+.bloco-texto-footer img {
+    padding-top: 6%;
+}
+
+.flex-container h2 {
+    width: 23%;
+}
+
+.flex-container-img {
+    width: 21%;
+    justify-content: flex-end;
+}
+
+.flex-container-img img {
+    width: 70%;
+}
+
+.flex-container-align-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experiencia {
+    background-color: #80C5E1;
+}
+
+.formacao {
+    background-color: black;
+    color: white;
+    height: 150vh;   
+}
+
+.contato {
+    background: #E0E0E0;
+    height: 50vh;
+    width: 100vw;
+}
+
+.bloco-texto-unidade {
+    margin-bottom: 4%;
+    display: block;
+}
+
+#formacao-academica {
+    margin-bottom: 5%;
+}
+
+.flex-bloco-texto-unidade {
+    display: flex;
+
+}
+
+.flex-bloco-texto-unidade img {
+    height: 20%;
+    margin-right: 4%;
+}
+
+
+.flex-container-bloco {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+/* responsivo mais ou menos, faltam as imagens dos ícones */
+
+@media only screen and (max-width: 600px) {
+    .background {
+        height: 80vh;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-container h2 {
+        width: 55%;
+        padding-bottom: 4%;
+    }
+}
+
+
